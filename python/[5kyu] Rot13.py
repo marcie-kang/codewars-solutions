@@ -21,3 +21,24 @@ def rot13(message):
         answer += converted
 
     return answer
+
+#second solution
+def rot13(message):
+    ALPHABET_SIZE = 26
+    result = ""
+
+    for letter in message:
+        unicode = ord(letter)
+
+        if 65 <= unicode <= 90 or 97 <= unicode <= 122:
+            converted_code = unicode + 13
+
+            if (letter.isupper() and converted_code > 90) or \
+                    (letter.islower() and converted_code > 122):
+                converted_code -= ALPHABET_SIZE
+
+            result += chr(converted_code)
+        else:
+            result += letter
+
+    return result

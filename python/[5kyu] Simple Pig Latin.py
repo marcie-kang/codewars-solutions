@@ -11,11 +11,11 @@ def pig_it(text):
     result = []
 
     for word in words:
-        new_word = word
+        new = word
 
         if word.isalpha():
-            new_word = word[1:] + word[0] + "ay"
+            new = word[1:] + word[0] + "ay"
 
-        result.append(new_word)
+        result.append(new)
 
     return " ".join(result)

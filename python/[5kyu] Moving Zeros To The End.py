@@ -9,3 +9,17 @@ def move_zeros(lst):
     removed += ([0] * (len(lst) - len(removed)))
 
     return removed
+
+#second
+def move_zeros(lst):
+    result = []
+
+    for num in lst:
+        if num != 0:
+            result.append(num)
+
+    if len(result) != len(lst):
+        diff = len(lst) - len(result)
+        result += [0] * diff
+
+    return result
